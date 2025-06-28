@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Python egg metadata
+*.egg-info/
+*.egg
+
+# Data files
+# *.csv
+*.xlsx
+*.xls
+*.json
+*.db
+*.sqlite3
+*.h5
+
+# Dataset directories (e.g., KaggleHub downloads)
+datasets/
+data/
+.kagglehub/
+
+# Model files
+# *.pkl
+*.joblib
+*.hdf5
+*.pt
+*.onnx
+
+# Logs
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment config
+.env
+.env.*
+
+# Streamlit
+.streamlit/
+
+# Jupyter Notebook hidden folder
+.jupyter/

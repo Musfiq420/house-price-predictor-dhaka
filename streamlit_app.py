@@ -12,6 +12,9 @@ beds = st.number_input("Number of Bedrooms", min_value=1, value=2)
 baths = st.number_input("Number of Bathrooms", min_value=1, value=2)
 area = st.number_input("Area (in sqft)", min_value=100, value=1000)
 
+area_per_bed = area/beds
+area_per_bath = area/baths
+
 location_cols = ['neighborhood_Aftab Nagar',
        'neighborhood_Agargaon', 'neighborhood_Badda', 'neighborhood_Banani',
        'neighborhood_Banasree', 'neighborhood_Baridhara',
@@ -34,7 +37,7 @@ location = st.selectbox("Select Location", location_list)
 
 location_input = [1 if loc == location else 0 for loc in location_list]
 
-features = np.array([beds, baths, area] + location_input).reshape(1, -1)
+features = np.array([beds, baths, area, area_per_bed, area_per_bath] + location_input).reshape(1, -1)
 
 if st.button("Predict Price:"):
     prediction = model.predict(features)[0]
